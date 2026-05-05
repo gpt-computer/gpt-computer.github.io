@@ -2,10 +2,29 @@ import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
 import { GitHubActivity } from "@/components/GitHubActivity"
 import { Newsletter } from "@/components/Newsletter"
+import { useEffect } from "react"
+import { getOrganizationSchema, getWebSiteSchema } from "@/lib/structured-data"
 import { GitHubOrgStats } from "@/components/GitHubOrgStats"
 import { FeaturedProducts } from "@/components/FeaturedProducts"
 
 export function Home() {
+  useEffect(() => {
+    const orgSchema = document.createElement("script")
+    orgSchema.type = "application/ld+json"
+    orgSchema.text = JSON.stringify(getOrganizationSchema())
+    document.head.appendChild(orgSchema)
+
+    const websiteSchema = document.createElement("script")
+    websiteSchema.type = "application/ld+json"
+    websiteSchema.text = JSON.stringify(getWebSiteSchema())
+    document.head.appendChild(websiteSchema)
+
+    return () => {
+      document.head.removeChild(orgSchema)
+      document.head.removeChild(websiteSchema)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
