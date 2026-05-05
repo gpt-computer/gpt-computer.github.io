@@ -4,6 +4,10 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+echo "Creating home directory for node user"
+sudo mkdir -p /home/node
+sudo chown node:node /home/node
+
 echo "Installing required packages"
 sudo apt-get update
 sudo apt-get install -y wget jq inotify-tools ripgrep fd-find
@@ -33,14 +37,14 @@ LATEST_RELEASE="$LATEST_RELEASE" WORKSPACE_DIR="$WORKSPACE_DIR" bash spark-sdk-d
 
 cd /workspaces/gpt-computer.github.io
 echo "Installing npm dependencies"
-sudo -u vscode npm install
+sudo -u node npm install
 
 echo "Configuring npm global directory"
-sudo -u vscode mkdir -p /home/vscode/.npm-global
-sudo -u vscode npm config set prefix '/home/vscode/.npm-global'
+sudo -u node mkdir -p /home/node/.npm-global
+sudo -u node npm config set prefix '/home/node/.npm-global'
 
 echo "Pre-starting the server and generating the optimized assets"
-sudo -u vscode npm run optimize --override
+sudo -u node npm run optimize --override
 
 echo "Installing supervisor"
 sudo apt-get install -y supervisor

@@ -1,14 +1,14 @@
 {
   "name": "Workbench template",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
-  "remoteUser": "vscode",
+  "remoteUser": "node",
   "hostRequirements": {
     "storage": "32gb",
     "memory": "8gb",
     "cpus": 4
   },
   "remoteEnv": {
-    "PATH": "${containerEnv:PATH}:/home/vscode/.npm-global/bin"
+    "PATH": "${containerEnv:PATH}:/home/node/.npm-global/bin"
   },
   // Runs automatically after Prebuild Template environment is created.
   "onCreateCommand": "bash .devcontainer/onCreate.sh",
