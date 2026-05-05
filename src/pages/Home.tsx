@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
 import { GitHubActivity } from "@/components/GitHubActivity"
+import { Newsletter } from "@/components/Newsletter"
 import { GitHubOrgStats } from "@/components/GitHubOrgStats"
 import { FeaturedProducts } from "@/components/FeaturedProducts"
 
@@ -55,6 +56,10 @@ export function Home() {
           <h2 className="text-2xl font-bold mb-6">Recent Activity</h2>
           <GitHubActivity />
         </div>
+      </section>
+
+      <section className="container mx-auto px-4 py-16">
+        <Newsletter />
       </section>
       </main>
       <Footer />
