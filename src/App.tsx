@@ -7,6 +7,8 @@ import { Footer } from "./components/Footer"
 import { ErrorBoundary } from "./components/ErrorBoundary"
 import { useAnalytics } from "./hooks/useAnalytics"
 import { CommandPalette } from "./components/CommandPalette"
+import { EasterEgg } from "./components/EasterEgg"
+import { useKonami } from "./hooks/useKonami"
 import { LoadingSpinner } from "./components/LoadingSpinner"
 
 const Home = lazy(() => import("./pages/Home"))
@@ -23,6 +25,9 @@ const queryClient = new QueryClient()
 
 function App() {
   useAnalytics()
+  useKonami(() => {
+    window.dispatchEvent(new CustomEvent("konami"))
+  })
 
   return (
     <ErrorBoundary>
@@ -47,6 +52,7 @@ function App() {
               </Suspense>
             </main>
             <CommandPalette />
+            <EasterEgg />
             <Footer />
           </div>
         </BrowserRouter>
