@@ -10,6 +10,7 @@ import { Repositories } from "./pages/Repositories"
 import { Community } from "./pages/Community"
 import { Blog } from "./pages/Blog"
 import { BlogPost } from "./pages/BlogPost"
+import { CommandPalette } from "./components/CommandPalette"
 
 const queryClient = new QueryClient()
 
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/blog/:slug" element={<BlogPost />} />
               </Routes>
             </main>
+            <CommandPalette />
             <Footer />
           </div>
         </BrowserRouter>
