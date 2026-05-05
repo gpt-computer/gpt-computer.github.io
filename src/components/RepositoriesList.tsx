@@ -2,7 +2,6 @@ import { useGitHubRepos } from "@/hooks/useGitHubRepos"
 import { Card, CardContent } from "./ui/card"
 import { Badge } from "./ui/badge"
 import { Star, GitFork, ExternalLink } from "lucide-react"
-import { Button } from "./ui/button"
 
 export function RepositoriesList() {
   const { data: repos, isLoading, error } = useGitHubRepos()

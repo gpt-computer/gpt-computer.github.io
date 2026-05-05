@@ -1,5 +1,6 @@
 import fs from "fs";
 
+/* global console */
 /** @type {import('tailwindcss').Config} */
 
 let theme = {};
