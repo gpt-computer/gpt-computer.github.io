@@ -6,6 +6,7 @@ import { Navigation } from "./components/Navigation"
 import { Footer } from "./components/Footer"
 import { ErrorBoundary } from "./components/ErrorBoundary"
 import { useAnalytics } from "./hooks/useAnalytics"
+import { initVitals } from "./lib/vitals"
 import { CommandPalette } from "./components/CommandPalette"
 import { SkipLink } from "./components/SkipLink"
 import { EasterEgg } from "./components/EasterEgg"
@@ -26,6 +27,7 @@ const queryClient = new QueryClient()
 
 function App() {
   useAnalytics()
+  initVitals()
   useKonami(() => {
     window.dispatchEvent(new CustomEvent("konami"))
   })
