@@ -42,6 +42,7 @@ function App() {
                   <Route path="/releases" element={<Releases />} />
                   <Route path="/faq" element={<FAQ />} />
                   <Route path="/status" element={<Status />} />
+                <Route path="/tutorials" element={<Tutorials />} />
                 </Routes>
               </Suspense>
             </main>
