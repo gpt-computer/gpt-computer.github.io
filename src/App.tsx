@@ -10,6 +10,7 @@ import { Repositories } from "./pages/Repositories"
 import { Community } from "./pages/Community"
 import { Blog } from "./pages/Blog"
 import { BlogPost } from "./pages/BlogPost"
+import { Releases } from "./pages/Releases"
 import { CommandPalette } from "./components/CommandPalette"
 
 const queryClient = new QueryClient()
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/community" element={<Community />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/releases" element={<Releases />} />
               </Routes>
             </main>
             <CommandPalette />
