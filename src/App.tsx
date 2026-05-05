@@ -10,6 +10,7 @@ import { initVitals } from "./lib/vitals"
 import { CommandPalette } from "./components/CommandPalette"
 import { SkipLink } from "./components/SkipLink"
 import { EasterEgg } from "./components/EasterEgg"
+import { Answer42 } from "./components/Answer42"
 import { useKonami } from "./hooks/useKonami"
 import { LoadingSpinner } from "./components/LoadingSpinner"
 
@@ -58,6 +59,7 @@ function App() {
             </main>
             <CommandPalette />
             <EasterEgg />
+            <Answer42 />
             <Footer />
           </div>
         </BrowserRouter>
