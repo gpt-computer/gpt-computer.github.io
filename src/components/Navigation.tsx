@@ -29,6 +29,9 @@ export function Navigation() {
              <Link to="/community" className="text-sm font-medium transition-colors hover:text-primary">
                Community
              </Link>
+             <Link to="/blog" className="text-sm font-medium transition-colors hover:text-primary">
+               Blog
+             </Link>
            </div>
 
           <div className="hidden md:block">

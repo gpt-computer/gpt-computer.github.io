@@ -8,6 +8,8 @@ import { Home } from "./pages/Home"
 import { Products } from "./pages/Products"
 import { Repositories } from "./pages/Repositories"
 import { Community } from "./pages/Community"
+import { Blog } from "./pages/Blog"
+import { BlogPost } from "./pages/BlogPost"
 
 const queryClient = new QueryClient()
 
@@ -26,6 +28,8 @@ function App() {
                 <Route path="/products" element={<Products />} />
                 <Route path="/repositories" element={<Repositories />} />
                 <Route path="/community" element={<Community />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
               </Routes>
             </main>
             <Footer />
