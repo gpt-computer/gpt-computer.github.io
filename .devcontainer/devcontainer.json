@@ -1,6 +1,6 @@
 {
-  "name": "Workbench template",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "name": "GPT Computer Organization Website",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm",
   "remoteUser": "node",
   "hostRequirements": {
     "storage": "32gb",
@@ -10,9 +10,7 @@
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}:/home/node/.npm-global/bin"
   },
-  // Runs automatically after Prebuild Template environment is created.
   "onCreateCommand": "bash .devcontainer/onCreate.sh",
-  // Runs automatically every time the dev container has been (re-)started
   "postStartCommand": "bash .devcontainer/postStartCommand.sh",
   "customizations": {
     "vscode": {
@@ -20,20 +18,19 @@
         "dbaeumer.vscode-eslint",
         "bradlc.vscode-tailwindcss",
         "esbenp.prettier-vscode",
-        "eamodio.gitlens"
+        "eamodio.gitlens",
+        "octref.vetur"
       ]
     }
   },
   "forwardPorts": [
-    4000,
-    4173,
     5000,
-    9000,
-    13000
+    4173
   ],
   "features": {
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
-    }
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   }
 }
