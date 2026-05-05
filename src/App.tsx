@@ -50,6 +50,7 @@ function App() {
                   <Route path="/faq" element={<FAQ />} />
                   <Route path="/status" element={<Status />} />
                 <Route path="/tutorials" element={<Tutorials />} />
+                <Route path="/dependencies" element={<Dependencies />} />
                 </Routes>
               </Suspense>
             </main>
