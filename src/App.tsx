@@ -11,6 +11,7 @@ import { Community } from "./pages/Community"
 import { Blog } from "./pages/Blog"
 import { BlogPost } from "./pages/BlogPost"
 import { Releases } from "./pages/Releases"
+import { FAQ } from "./pages/FAQ"
 import { CommandPalette } from "./components/CommandPalette"
 
 const queryClient = new QueryClient()
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/releases" element={<Releases />} />
+                <Route path="/faq" element={<FAQ />} />
               </Routes>
             </main>
             <CommandPalette />
