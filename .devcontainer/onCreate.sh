@@ -33,10 +33,14 @@ LATEST_RELEASE="$LATEST_RELEASE" WORKSPACE_DIR="$WORKSPACE_DIR" bash spark-sdk-d
 
 cd /workspaces/gpt-computer.github.io
 echo "Installing npm dependencies"
-sudo -u node npm install
+sudo -u vscode npm install
+
+echo "Configuring npm global directory"
+sudo -u vscode mkdir -p /home/vscode/.npm-global
+sudo -u vscode npm config set prefix '/home/vscode/.npm-global'
 
 echo "Pre-starting the server and generating the optimized assets"
-sudo -u node npm run optimize --override
+sudo -u vscode npm run optimize --override
 
 echo "Installing supervisor"
 sudo apt-get install -y supervisor
