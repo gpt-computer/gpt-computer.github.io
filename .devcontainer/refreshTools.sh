@@ -2,8 +2,8 @@
 
 set -e
 
-WORKSPACE_DIR="/workspaces/spark-template"
-LATEST_RELEASE=$(curl -s https://api.github.com/repos/github/spark-template/releases/latest)
+WORKSPACE_DIR="/workspaces/gpt-computer.github.io"
+LATEST_RELEASE=$(curl -s https://api.github.com/repos/gpt-computer/gpt-computer.github.io/releases/latest)
 RELEASE_ID=$(echo "$LATEST_RELEASE" | jq -r '.id')
 
 
