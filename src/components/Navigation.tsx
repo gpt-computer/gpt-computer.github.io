@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { Menu, X } from "lucide-react"
 import { Button } from "./ui/button"
 import { SiteSearch } from "./Search"
+import { ThemeToggle } from "./ThemeToggle"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,14 +23,19 @@ export function Navigation() {
             <Link to="/products" className="text-sm font-medium transition-colors hover:text-primary">
               Products
             </Link>
-            <Link to="/repositories" className="text-sm font-medium transition-colors hover:text-primary">
-              Repositories
-            </Link>
-          </div>
+             <Link to="/repositories" className="text-sm font-medium transition-colors hover:text-primary">
+               Repositories
+             </Link>
+             <Link to="/community" className="text-sm font-medium transition-colors hover:text-primary">
+               Community
+             </Link>
+           </div>
 
           <div className="hidden md:block">
             <SiteSearch />
           </div>
+
+          <ThemeToggle />
 
           <Button
             variant="ghost"
