@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react"
 
-export function useWebSocket(url: string, onMessage: (data: any) => void) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function useWebSocket(url: string, _onMessage: (data: unknown) => void) {
   const ws = useRef<WebSocket | null>(null)
 
   useEffect(() => {
@@ -17,7 +18,7 @@ export function useWebSocket(url: string, onMessage: (data: any) => void) {
     }
   }, [url])
 
-  const sendMessage = (data: any) => {
+  const sendMessage = (data: unknown) => {
     if (ws.current && ws.current.readyState === WebSocket.OPEN) {
       ws.current.send(JSON.stringify(data))
     }

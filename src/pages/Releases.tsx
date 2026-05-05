@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Tag, Calendar, Package } from "lucide-react"
+import { Calendar, Package } from "lucide-react"
 import { Link } from "react-router-dom"
 
 const releases = [

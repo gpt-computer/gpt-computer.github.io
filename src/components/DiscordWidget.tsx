@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import { MessageCircle, Users, Hash } from "lucide-react"
+import { useState } from "react"
+import { MessageCircle, Hash } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
@@ -63,7 +63,7 @@ export function DiscordWidget() {
   )
 }
 
-function Badge({ children, variant }: { children: React.ReactNode; variant: string }) {
+function Badge({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-1 text-xs border rounded px-2 py-1">
       {children}

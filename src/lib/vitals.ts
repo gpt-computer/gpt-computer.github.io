@@ -8,7 +8,7 @@ export function initVitals() {
   onTTFB((metric) => sendToAnalytics("TTFB", metric))
 }
 
-function sendToAnalytics(name: string, metric: any) {
+function sendToAnalytics(name: string, metric: { value: number; id: string; delta: number }) {
   const body = JSON.stringify({
     name,
     value: metric.value,

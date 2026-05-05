@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { Github, GitCommit, GitPullRequest, AlertCircle } from "lucide-react"
+import { useState } from "react"
+import { GitCommit, GitPullRequest, AlertCircle } from "lucide-react"
 
 interface ActivityItem {
   type: "push" | "pr" | "issue"

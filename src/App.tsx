@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react"
-import i18n from "./lib/i18n"
+// i18n is initialized on import
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { Navigation } from "./components/Navigation"

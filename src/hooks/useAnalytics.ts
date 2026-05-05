@@ -5,8 +5,11 @@ export function useAnalytics() {
   const location = useLocation()
 
   useEffect(() => {
-    if (typeof window !== "undefined" && (window as any).plausible) {
-      (window as any).plausible("pageview", { u: window.location.href })
+    if (typeof window !== "undefined") {
+      const w = window as unknown as { plausible?: (event: string, options: { u: string }) => void }
+      if (w.plausible) {
+        w.plausible("pageview", { u: window.location.href })
+      }
     }
   }, [location])
 }

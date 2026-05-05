@@ -1,3 +1,4 @@
+/* global self, caches, fetch */
 // Simple service worker for PWA offline support
 const CACHE_NAME = "gpt-computer-v1"
 const urlsToCache = ["/", "/index.html", "/assets/index.js", "/assets/index.css"]
