@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer"
 import { ErrorBoundary } from "./components/ErrorBoundary"
 import { useAnalytics } from "./hooks/useAnalytics"
 import { CommandPalette } from "./components/CommandPalette"
+import { SkipLink } from "./components/SkipLink"
 import { EasterEgg } from "./components/EasterEgg"
 import { useKonami } from "./hooks/useKonami"
 import { LoadingSpinner } from "./components/LoadingSpinner"
@@ -33,6 +34,7 @@ function App() {
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
+          <SkipLink />
           <div className="min-h-screen flex flex-col">
             <Navigation />
             <main className="flex-1">
